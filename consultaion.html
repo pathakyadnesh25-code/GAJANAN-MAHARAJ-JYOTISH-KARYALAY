@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Consultation | Gajanan Maharaj Jyotish Karyalay</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<a href="index.html" class="logo">
+
+<div class="logo-symbol">ॐ</div>
+
+<div class="logo-text">
+
+<strong>GAJANAN MAHARAJ</strong>
+
+<span>JYOTISH KARYALAY</span>
+
+</div>
+
+</a>
+
+
+<button class="menu-toggle"
+id="menuToggle">☰</button>
+
+
+<nav id="mainNav">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="kundali.html">Kundali</a>
+
+<a href="consultation.html"
+class="active">Consultation</a>
+
+<a href="dharmik-karya.html">
+Dharmik Karya
+</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero"
+style="min-height:60vh;">
+
+<div class="hero-content">
+
+<div class="om-large">ॐ</div>
+
+<p class="hero-small">
+PERSONAL CONSULTATION
+</p>
+
+<h1>
+Discuss Your
+<span>Questions</span>
+</h1>
+
+<p class="hero-description">
+
+Share your basic details and the topic
+you would like to discuss.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-heading">
+
+<span>BOOK A CONSULTATION</span>
+
+<h2>
+Start Your
+<em>Enquiry</em>
+</h2>
+
+<p>
+Fill in the form below. Your enquiry will
+be prepared as a WhatsApp message.
+</p>
+
+</div>
+
+
+<form
+class="premium-form"
+onsubmit="sendConsultation(event)"
+>
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>Full Name *</label>
+
+<input
+id="consultName"
+required
+placeholder="Your name">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number *</label>
+
+<input
+id="consultPhone"
+required
+type="tel"
+placeholder="Mobile number">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Preferred Contact</label>
+
+<select id="consultMode">
+
+<option>WhatsApp</option>
+
+<option>Phone Call</option>
+
+<option>In-Person</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Topic</label>
+
+<select id="consultTopic">
+
+<option>General Guidance</option>
+
+<option>Career & Education</option>
+
+<option>Marriage / Relationship</option>
+
+<option>Family</option>
+
+<option>Business</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Your Question *</label>
+
+<textarea
+id="consultQuestion"
+required
+rows="6"
+placeholder="Briefly write your question..."></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+class="btn btn-primary"
+type="submit">
+
+Send Consultation Request
+
+</button>
+
+
+<p class="form-note">
+
+Consultation timing and applicable charges
+can be confirmed through WhatsApp.
+
+</p>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-brand">
+
+<div class="footer-logo">ॐ</div>
+
+<h3>
+Gajanan Maharaj
+<br>
+Jyotish Karyalay
+</h3>
+
+<p>
+Astrology • Kundali • Dharmik Karya
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Explore</h4>
+
+<a href="index.html">Home</a>
+
+<a href="services.html">Services</a>
+
+<a href="kundali.html">Kundali</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Services</h4>
+
+<a href="dharmik-karya.html">
+Dharmik Karya
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Location</h4>
+
+<p>
+Nashik, Maharashtra
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Gajanan Maharaj Jyotish Karyalay.
+</p>
+
+</div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+function sendConsultation(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "consultName"
+        ).value;
+
+    const phone =
+        document.getElementById(
+            "consultPhone"
+        ).value;
+
+    const mode =
+        document.getElementById(
+            "consultMode"
+        ).value;
+
+    const topic =
+        document.getElementById(
+            "consultTopic"
+        ).value;
+
+    const question =
+        document.getElementById(
+            "consultQuestion"
+        ).value;
+
+
+    const text =
+
+`Namaskar 🙏
+
+I would like to enquire about a consultation.
+
+Name: ${name}
+
+Mobile: ${phone}
+
+Preferred Contact: ${mode}
+
+Topic: ${topic}
+
+Question:
+${question}
+
+Please let me know the available consultation timing and charges.
+
+Thank you.
+Gajanan Maharaj Jyotish Karyalay`;
+
+
+    const whatsappNumber =
+        "91XXXXXXXXXX";
+
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text),
+
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
