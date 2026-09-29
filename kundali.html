@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Kundali Preparation | Gajanan Maharaj Jyotish Karyalay</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<a href="index.html" class="logo">
+
+<div class="logo-symbol">ॐ</div>
+
+<div class="logo-text">
+
+<strong>GAJANAN MAHARAJ</strong>
+
+<span>JYOTISH KARYALAY</span>
+
+</div>
+
+</a>
+
+
+<button class="menu-toggle"
+id="menuToggle">☰</button>
+
+
+<nav id="mainNav">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="kundali.html"
+class="active">Kundali</a>
+
+<a href="consultation.html">Consultation</a>
+
+<a href="dharmik-karya.html">
+Dharmik Karya
+</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero"
+style="min-height:60vh;">
+
+<div class="hero-content">
+
+<div class="om-large">ॐ</div>
+
+<p class="hero-small">
+KUNDALI PREPARATION
+</p>
+
+<h1>
+Your Birth
+<span>Kundali</span>
+</h1>
+
+<p class="hero-description">
+
+Submit your basic birth details to
+request Kundali preparation.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-heading">
+
+<span>REQUEST KUNDALI</span>
+
+<h2>
+Enter Your
+<em>Birth Details</em>
+</h2>
+
+<p>
+Please enter accurate information so that
+your request can be reviewed.
+</p>
+
+</div>
+
+
+<form
+class="premium-form"
+id="kundaliForm"
+onsubmit="sendKundaliWhatsApp(event)"
+>
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>Full Name *</label>
+
+<input
+type="text"
+id="kundaliName"
+required
+placeholder="Enter your full name">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number *</label>
+
+<input
+type="tel"
+id="kundaliPhone"
+required
+placeholder="Enter mobile number">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Date of Birth *</label>
+
+<input
+type="date"
+id="kundaliDob"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Time of Birth *</label>
+
+<input
+type="time"
+id="kundaliTime"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Place of Birth *</label>
+
+<input
+type="text"
+id="kundaliPlace"
+required
+placeholder="City / Village">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Kundali Requirement</label>
+
+<select id="kundaliPurpose">
+
+<option>
+General Kundali
+</option>
+
+<option>
+Career & Education
+</option>
+
+<option>
+Marriage / Relationship
+</option>
+
+<option>
+Family
+</option>
+
+<option>
+Business
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Additional Message</label>
+
+<textarea
+id="kundaliMessage"
+rows="5"
+placeholder="Write any additional requirements..."></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary">
+
+Send Kundali Request on WhatsApp
+
+</button>
+
+
+<p class="form-note">
+
+Your request will open WhatsApp with
+the information entered above.
+
+</p>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-brand">
+
+<div class="footer-logo">ॐ</div>
+
+<h3>
+Gajanan Maharaj
+<br>
+Jyotish Karyalay
+</h3>
+
+<p>
+Astrology • Kundali • Dharmik Karya
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Explore</h4>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Services</h4>
+
+<a href="consultation.html">
+Consultation
+</a>
+
+<a href="dharmik-karya.html">
+Dharmik Karya
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Contact</h4>
+
+<p>
+Nashik, Maharashtra
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Gajanan Maharaj Jyotish Karyalay.
+</p>
+
+</div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+function sendKundaliWhatsApp(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById(
+            "kundaliName"
+        ).value;
+
+    const phone =
+        document.getElementById(
+            "kundaliPhone"
+        ).value;
+
+    const dob =
+        document.getElementById(
+            "kundaliDob"
+        ).value;
+
+    const time =
+        document.getElementById(
+            "kundaliTime"
+        ).value;
+
+    const place =
+        document.getElementById(
+            "kundaliPlace"
+        ).value;
+
+    const purpose =
+        document.getElementById(
+            "kundaliPurpose"
+        ).value;
+
+    const message =
+        document.getElementById(
+            "kundaliMessage"
+        ).value;
+
+
+    const text =
+
+`Namaskar 🙏
+
+I would like to request Kundali preparation.
+
+Name: ${name}
+
+Mobile: ${phone}
+
+Date of Birth: ${dob}
+
+Time of Birth: ${time}
+
+Place of Birth: ${place}
+
+Requirement: ${purpose}
+
+Additional Message:
+${message}
+
+Thank you.
+Gajanan Maharaj Jyotish Karyalay`;
+
+
+    const whatsappNumber =
+        "91XXXXXXXXXX";
+
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text),
+
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
